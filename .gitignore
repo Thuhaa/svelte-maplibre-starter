@@ -1,0 +1,16 @@
+.DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
+.idea
+.vscode/
+/data/tags.json
+/data/stac-*
+coverage
+data/tags.json
+env.ts
+yarn-error.log
