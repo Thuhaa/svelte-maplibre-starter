@@ -3,11 +3,10 @@
   import maplibregl, { Map } from 'maplibre-gl'
   import 'maplibre-gl/dist/maplibre-gl.css'
   import { map } from '../stores'
-  import { addFillGeoJSONToMap, showChoropleth, updateChoropleth } from "../helperFunctions";
+  import { addFillGeoJSONToMap, updateChoropleth } from "../helperFunctions";
 
   export let data: any
   export let showProperty: string
-  console.log(showProperty)
   let mapContainer: HTMLDivElement
   let mapLibreMap: Map
   let propertySelectControl: any
