@@ -1,5 +1,5 @@
 ## This is a starter template for maplibre and svelte
-# Clone this application by running
+#### Clone this application by running
 ```bash
 git clone https://github.com/Thuhaa/svelte-maplibre-starter.git
 ```

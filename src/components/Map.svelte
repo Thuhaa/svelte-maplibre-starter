@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onDestroy, onMount } from "svelte";
+  import { onMount } from "svelte";
   import maplibregl, { Map } from 'maplibre-gl'
   import 'maplibre-gl/dist/maplibre-gl.css'
   import { map } from '../stores'
@@ -42,7 +42,7 @@
     this._map = undefined;
   };
 
-  onMount(async () => {
+  onMount(() => {
     mapLibreMap = new Map({
           container: mapContainer,
           style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
@@ -79,7 +79,7 @@
 
 </script>
 <div class="map" id="map" bind:this={mapContainer}>
-  {#if $map}
+  {#if map}
     <slot />
   {/if}
 </div>
