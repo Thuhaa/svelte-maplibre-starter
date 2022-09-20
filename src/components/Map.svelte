@@ -42,7 +42,7 @@
     this._map = undefined;
   };
 
-  onMount(() => {
+  onMount(async () => {
     mapLibreMap = new Map({
           container: mapContainer,
           style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
@@ -56,9 +56,8 @@
     mapLibreMap.addControl(new maplibregl.GeolocateControl({}), 'top-right')
     mapLibreMap.addControl(propertySelectControl, 'top-left')
 
-
     mapLibreMap.on('load', () => {
-      map.set(mapLibreMap)
+      map.update(() => mapLibreMap)
       addFillGeoJSONToMap(mapLibreMap, data, 'districts')
     })
 
@@ -72,20 +71,15 @@
         )
         .addTo(mapLibreMap);
     });
-    $map = mapLibreMap
   });
 
   const updateChoroplethMap = (showProperty: string) => {
     updateChoropleth(mapLibreMap, data, 'districts', showProperty)
   }
 
-  onDestroy(() => {
-    map.set(null)
-  });
-
 </script>
 <div class="map" id="map" bind:this={mapContainer}>
-  {#if map}
+  {#if $map}
     <slot />
   {/if}
 </div>
