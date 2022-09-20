@@ -61,6 +61,17 @@
       map.set(mapLibreMap)
       addFillGeoJSONToMap(mapLibreMap, data, 'districts')
     })
+
+    mapLibreMap.on('click', 'districts', function (e) {
+      new maplibregl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(
+          '<p>' +
+          e.features[0].properties[showProperty] +
+          '</p>'
+        )
+        .addTo(mapLibreMap);
+    });
     $map = mapLibreMap
   });
 
