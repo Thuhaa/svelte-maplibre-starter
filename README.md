@@ -3,9 +3,12 @@
 ```bash
 git clone https://github.com/Thuhaa/svelte-maplibre-starter.git
 ```
-A new directory will be created with the name of the project. Change into that directory and install the dependencies.
+A new directory will be created with the name of the project. Change into that directory
 ```bash
 cd svelte-maplibre-starter
+```
+Install the dependencies...
+```bash
 yarn install
 ```
 Start the application in development mode:
