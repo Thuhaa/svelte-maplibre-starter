@@ -15,7 +15,7 @@ Start the application in development mode:
 ```bash
 yarn run dev
 ```
-Open up [localhost:5173](http://localhost:5173).
+Open up [http://127.0.0.1:5173](http://127.0.0.1:5173).
 
 Congratulations, your app is up and running!
 Happy coding!
