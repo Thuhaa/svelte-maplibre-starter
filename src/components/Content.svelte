@@ -11,6 +11,7 @@
     $optionsList = Object.keys(data.features[0].properties)
   })
 
+
 </script>
 <Map bind:data={data} bind:showProperty={selectedOption}/>
 <style>
